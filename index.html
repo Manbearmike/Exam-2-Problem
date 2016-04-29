@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exam 2 Problem</title>
+<link rel="stylesheet" type="text/css" href="styles/Exam2problem.css" />
+<script src="js/Exam2problem.js"></script>
+</head>
+<body>
+<h1>Exam 2 Problem</h1>
+<hr>
+<p>
+<select onchange="MenuChoice()" id="SectionMenu">
+    <option>Please Choose A Section</option>
+    <option>Display The First Section</option>
+    <option>Display The Second Section</option>
+    <option>Display The Third Section</option>
+    <option>Display The Fourth Section</option>
+    <option>Display The Fifth Section</option>
+    </select>
+</p>
+<section id="FirstSection" class="FirstSection"> 
+<h2>
+<br>
+<button onclick="CategoryInfo()" id="CategoryInfo">Retrieve Category Info</button>
+<br>
+<hr>
+<br>
+<label id="AllCategoriesdisplay">The operation's result will display here.</label>
+</h2>
+</section>
+<section id="SecondSection" class="SecondSection">
+<h2>
+<br>
+<label>Please enter the Category Name: </label>
+<input type="text" id="categoryname">
+<br>
+<label>Please A Category Description: </label>
+<input type="text" id="categorydescription">
+<br>
+<button onclick="CreateCategory()" id="NewCategory">Add a New Category</button>
+<br>
+<hr>
+<br>
+<label id="result">The operation's result will display here.</label>
+</h2>
+</section>
+<section id="ThirdSection" class="ThirdSection"> 
+<h2>
+<br>
+<label>Please enter the Category ID: </label>
+<input type="text" id="CategoryID">
+<br>
+<label>Please A Category Description: </label>
+<input type="text" id="IDdescriptionchange">
+<br>
+<button onclick="UpdateCategory()" id="NewIDdescription">Change a Category ID Description</button>
+<br>
+<label id="Descriptionresult">The operation's result will display here.</label>
+</h2>
+</section>
+<section id="FourthSection" class="FourthSection">
+<h2> 
+<hr>
+<label>Please enter a Customer ID: </label>
+<input type="text" id="customerDeletion">
+<br> 
+<button onclick="DeleteCustomers()" id="deleteCustomerBtn">Delete Customer Info</button>
+<br>
+<hr>
+<label id="deleteCustomerStatus"> Deletion Status</label>
+</h2>
+<br>
+</section>
+<section id="FifthSection" class="FifthSection">
+<h2>
+<br>
+</section>
+<br>
+</body>
+</html>

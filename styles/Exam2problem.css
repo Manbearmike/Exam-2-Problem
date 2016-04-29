@@ -1,0 +1,19 @@
+h1 {font-size: 24pt; text-align: center; color: Orchid; }
+p {text-align: center;}
+Body {background-color: black;}
+section.FirstSection {visibility: hidden;}
+section.SecondSection {visibility: hidden;}
+section.ThirdSection {visibility: hidden;}
+section.FourthSection {visibility: hidden;}
+section.FifthSection {visibility: hidden;}
+td, table, th {border: 1px solid white; text-align: center;}
+h2 {
+    height:600px;
+    width: 600px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left:-300px;
+    z-index: 600;
+    color: white;
+    }
