@@ -63,34 +63,34 @@ function UpdateCategory()
                         objRequest.send(newdescription);   }
 function DescriptionResult(output)
 {
-if (output == 1)
+if (output.WasSuccessful == 1)
     { document.getElementById("Descriptionresult").innerHTML = "The operation was successful!" }
     else  
-    { document.getElementById("Descriptionresult").innerHTML = "The operation was not successful!" + "<br>" + output;}}
+    { document.getElementById("Descriptionresult").innerHTML = "The operation was not successful!" + "<br>" + output.Exception;}}
     
 ////////////////////////////////////////////////////////////////////////////////
-function DeleteCustomers() //getOrdersForCustomer Called by Button
+function DeleteCategory() //getOrdersForCustomer Called by Button
 {   var objRequest = new XMLHttpRequest();
     //Create AJAX request object
     //Create URL and Query string
-    var url = "http://bus-pluto.ad.uab.edu/jsonwebservice/service1.svc/deleteCategory";
-    url += document.getElementById("customerDeletion").value;
+    var url = "http://bus-pluto.ad.uab.edu/jsonwebservice/service1.svc/deleteCategory/";
+    url += document.getElementById("categoryDeletion").value;
     //Checks that the object has returned data
     objRequest.onreadystatechange = function()
 {         if (objRequest.readyState == 4 && objRequest.status == 200)
 {         var Deletionoutput = JSON.parse(objRequest.responseText);
-         deleteCustomerInfo(Deletionoutput);
+         deleteCategoryInfo(Deletionoutput);
 }
 }   //Initiate the server request
     objRequest.open("GET", url, true);
     objRequest.send(); }
     
-    function deleteCustomerInfo(Deletionoutput)
+    function deleteCategoryInfo(Deletionoutput)
 {
-if (Deletionoutput.WasSuccessful == 1)
-    { document.getElementById("deleteCustomerStatus").innerHTML = "The operation was successful!" }
+if (Deletionoutput.DeleteCategoryResult.WasSuccessful == 1)
+    { document.getElementById("deleteCategoryStatus").innerHTML = "The operation was successful!" }
     else
-    { document.getElementById("deleteCustomerStatus").innerHTML = "The operation was not successful!" + "<br>" + Deletionoutput;}}
+    { document.getElementById("deleteCategoryStatus").innerHTML = "The operation was not successful!" + "<br>" + Deletionoutput.Exception;}}
     
 //////////////////////////////////////////////////END SECTION CUSTOMER HISTORY///////////////////////////////////////////   
 
